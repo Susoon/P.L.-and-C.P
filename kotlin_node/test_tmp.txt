@@ -1,0 +1,35 @@
+abstract class Shape(val sides: List<Double>) {
+    val perimeter: Double = sides.sum()
+    abstract fun calculateArea(): Double
+}
+
+interface RectangleProperties {
+    val isSquare: Boolean
+}
+
+class Rectangle(
+    var height: Double,
+    var length: Double
+) : Shape(listOf(height, length, height, length)), RectangleProperties {
+    override val isSquare: Boolean = length == height
+    override fun calculateArea(): Double = height * length
+}
+
+class Triangle(
+    var sideA: Double,
+    var sideB: Double,
+    var sideC: Double
+) : Shape(listOf(sideA, sideB, sideC)) {
+    override fun calculateArea(): Double {
+        val s = perimeter / 2
+        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC))
+    }
+}
+fun main() {
+  val fruits = listOf("banana", "avocado", "apple", "kiwifruit")
+  fruits
+    .filter { it.startsWith("a") }
+    .sortedBy { it }
+    .map { it.toUpperCase() }
+    .forEach { println(it) }
+}
