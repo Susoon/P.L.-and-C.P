@@ -217,34 +217,28 @@ void Print_Tree(NODE * parent, int blank)
 			if(tmp -> type == decl_with_no_type)
 			{
 				int tmp_idx = Find_var_index(tmp -> name, id_name);
-		 		printf("%s ", ttos(id_type[tmp_idx])); 
 			}
 			if(tmp -> token_type == 1000)
 			{
-				printf("%s ", tmp -> name);
 				fprintf(yyout, "%s ", tmp -> name);
 			}
 			if(tmp -> space == NOT_SPACE)
 			{
 				fseek(yyout, -1, SEEK_CUR);
-				printf("\b");
 			}
 			if(tmp -> token_type == NEED_NOW)
 			{
 				fprintf(yyout, ";\n");
-				printf(";\n");
 			}
 			if(tmp -> name[0] == '/' && tmp -> name[1] == '/')
 			{
 				fprintf(yyout, "\n");
-				printf("\n");
 			}
 		}
 		Print_Tree(tmp, blank);
 		if(tmp -> token_type == NEED)
 		{
 			fprintf(yyout, ";\n");
-			printf(";\n");
 		}
 		tmp = tmp -> next;
 	}

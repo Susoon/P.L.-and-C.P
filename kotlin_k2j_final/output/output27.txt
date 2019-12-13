@@ -1,0 +1,9 @@
+import java.util.*;
+public class output27 {
+public static void main (String[] args) {
+for ( x <= 5 ){
+System.out.println(x );
+}
+}
+}
+ 

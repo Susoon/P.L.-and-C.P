@@ -1,0 +1,19 @@
+import java.util.*;
+public class output20 {
+public static Integer getStringLength (Object obj ) {
+// 'obj' is automatically cast to 'String' on the right-hand side of '&&
+if(obj instanceof String && obj.length > 0 ){
+return obj.length ;
+}
+return null;
+}
+public static void main (String[] args) {
+public static Object printLength (Object obj ) {
+System.out.println("'$obj' string length is ${getStringLength(obj) ?: ... err, is empty or not a string at all} " );
+}
+printLength("Incomprehensibilities" );
+printLength("" );
+printLength(1000 );
+}
+}
+ 

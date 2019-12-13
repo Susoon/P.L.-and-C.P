@@ -1,0 +1,15 @@
+import java.util.*;
+public class output9 {
+final double PI = 3.14 ;
+ int x = 0 ;
+public static void incrementX () {
+x += 1 ;
+}
+public static void main (String[] args) {
+System.out.println("x = $x; PI = $PI" );
+incrementX();
+System.out.println("incrementX()" );
+System.out.println("x = $x; PI = $PI" );
+}
+}
+ 

@@ -1,0 +1,13 @@
+import java.util.*;
+public class output28 {
+public static void main (String[] args) {
+for ( x <= 10 = 2 ){
+System.out.println(x );
+}
+System.out.println();
+for ( x -0 = 3 ){
+System.out.println(x );
+}
+}
+}
+ 
